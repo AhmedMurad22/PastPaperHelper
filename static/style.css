@@ -2,23 +2,41 @@
     margin: 0px;
     padding: 0px;
 }
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #b4a79d;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #265828;
+    color: white;
+    font-weight: bold;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e1d0c1;
+}
 .heading {
     color: #265828;
     font-size:500%;
     text-align: center;
     padding-right: 30px;
 }
-
-body {
-    background-color: #e1d0c1;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-}
-
 .dropdown-box {
     font-size: medium;
     padding: 3px;
