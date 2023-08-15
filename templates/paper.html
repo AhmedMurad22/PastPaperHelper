@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title> Paper Page </title>
+</head>
+<body>
+    <script>
+        var qp_url = {{ qpurl | tojson | safe }};
+        var ms_data = {{ ms_data | tojson | safe }};
+        var subject = {{ pd_subject | tojson | safe }};
+        var year = {{ pd_year | tojson | safe }};
+        var code = {{ pd_code | tojson | safe }};
+        var series = {{ pd_series | tojson | safe }};
+        var variant = {{ pd_variant | tojson | safe }};
+        var coreorextended = {{ pd_coreorextended | tojson | safe }}; 
+    </script>
+    
+    <h1 id="paper-details"></h1>
+    <h3 id="question-num"> Question Number: 1 </h3>
+    <br>
+    <p id="correct-wrong" class="correct-wrong-text"></p>
+    <button id="btna" class="option" data-value="A"> A </button>
+    <button id="btnb" class="option" data-value="B"> B </button>
+    <button id="btnc" class="option" data-value="C"> C </button>
+    <button id="btnd" class="option" data-value="D"> D </button>
+
+    
+    <iframe align="right" id="pdf" class="pdf-embed" src="" ></iframe>
+
+    <script src="{{ url_for('static', filename='paper.js') }}"></script>
+</body>
+</html>
