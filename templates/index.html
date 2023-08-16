@@ -4,29 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="stylesheet" href="tempstylesheet.css">
     <title> PastPaperHelper Home </title>
 </head>
 <body>
     <div class="navbar">
-        <a class="active" href="#">Home</a>
+        <a class="active" href="{{ url_for('index') }}">Home</a>
         <a href="https://github.com/AhmedMurad22/PastPaperHelper">Github Repository</a>
-        <a class="about"  href="#">About</a>
+        <a href="#">About</a>
     </div>
 
-    <h1 class='heading'>Select MCQ Paper: </h1>
+    <h1 class="main-heading">Select MCQ Paper: </h1>
+
     <form id="main-form" method="POST" action="/submit">
-        <div>
-            <select class="dropdown-box hover" id="code" name="code">
+        <div class="dropdown-box">
+            <select class="dropdown" id="code" name="code">
                 <option selected disabled hidden>Click to select subject</option>
                 <option class="disabled-option" disabled> IGCSE SUBJECTS</option>
                 <option value="0610">  Biology - 0610 </option>
                 <option value="0620">  Chemistry - 0620 </option>
                 <option value="0625">  Physics - 0625 </option>
-            </select>
-        </div>
-        <div>
-            <select class="dropdown-box hover" id="year" name="year">
+            </select><br>
+            <select class="dropdown" id="year" name="year">
                 <option selected disabled hidden>Click to select year</option>
                 <option value="17">  2017  </option>
                 <option value="18">  2018  </option>
@@ -35,33 +33,27 @@
                 <option value="21">  2021  </option>
                 <option value="22">  2022  </option>
                 <option value="23">  2023  </option>
-            </select>
-        </div>
-        <div>
-            <select class="dropdown-box hover" id="coreORextended" name="coreORextended">
+            </select><br>
+            <select class="dropdown" id="coreORextended" name="coreORextended">
                 <option selected disabled hidden> Click to select Core or Extended </option>
                 <option value="1">  Core  </option>
                 <option value="2">  Extended  </option>
-            </select>
-        </div>
-        <div>
-            <select class="dropdown-box hover" id="series" name="series">
+            </select><br>
+            <select class="dropdown" id="series" name="series">
                 <option selected disabled hidden>Click to select Cycle</option>
                 <option value="s">  May/June          </option>
                 <option value="w">  October/November  </option>
                 <option value="m">  February/March    </option>
-            </select>
-        </div>
-        <div>
-            <select class="dropdown-box hover" id="variant" name="variant">
+            </select><br>
+            <select class="dropdown" id="variant" name="variant">
                 <option selected disabled hidden>Click to select Variant</option>
                 <option value="1">  1  </option>
                 <option value="2">  2  </option>
                 <option value="3">  3  </option>
-            </select>
-        </div>
+            </select><br>
 
-            <input class="submit-button hover-submit" type="submit" value="Submit">
+            <input class="submit-btn hover" type="submit" value="Submit">
+        </div>
     </form>
 </body>
 </html>
