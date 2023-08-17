@@ -109,6 +109,31 @@ body {
 #btnd {
     background-color: #928150;
 }
+.glow {
+    animation: glow-animation 1s infinite alternate;
+}
+@keyframes glow-animation {
+    0% {
+        filter: brightness(1);
+    }
+    100% {
+        filter: brightness(2);
+    }
+}
+/* Add fading out effect when removing the glow */
+.glow.fade-out {
+    animation: glow-fade-out 0.5s forwards;
+}
+
+@keyframes glow-fade-out {
+    0% {
+        filter: brightness(1.5);
+    }
+    100% {
+        filter: brightness(1);
+        opacity: 0;
+    }
+}
 .pdf-embed {
     height: 1000px;
     width: 900px;

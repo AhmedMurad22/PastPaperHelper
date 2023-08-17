@@ -38,6 +38,10 @@ function updateQuestionNum(event) {
     var cowtColor = document.getElementById('correct-wrong');
 
     // Compare the clicked answer with the correct answer
+    var correctButtonId = 'btn' + correctAnswer.toLowerCase(); // Convert "A" to "btna"
+    var correctButton = document.getElementById(correctButtonId);
+
+    // Compare the clicked answer with the correct answer
     var correctWrongElement = document.getElementById('correct-wrong');
     if (validAnswer === correctAnswer) {
         correctWrongElement.textContent = "Correct!";
@@ -45,13 +49,15 @@ function updateQuestionNum(event) {
     } else {
         correctWrongElement.textContent = "Wrong!";
         cowtColor.style.color = 'red';
+
+        // Add class for glow effect to the correct button even on wrong answer
+        correctButton.classList.add('glow');
     }
 
     // Display the message and glowing effect for 1.5 seconds
     setTimeout(function() {
         correctWrongElement.textContent = "";
         // Remove the class for glow effect from the correct button
-        var correctButton = document.getElementById(clickedButtonId);
         correctButton.classList.remove('glow');
     }, 1500);  // 1500 milliseconds = 1.5 seconds
 }
