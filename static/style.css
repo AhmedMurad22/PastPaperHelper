@@ -78,9 +78,9 @@ body {
 .text-box h1 {
     padding-left: 60px;
 }
-.text-box p {
+.holder p {
     padding-left: 180px;
-    padding-bottom: 30px;
+    padding-top: 30px;
     font-size: x-large
 }
 .option {
