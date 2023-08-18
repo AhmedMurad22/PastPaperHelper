@@ -15,7 +15,16 @@ var buttonToAnswerMap = {
     'btnd': 'D',
 };
 
+var questionNumMax = document.getElementById('question-num');
+
 function updateQuestionNum(event) {
+    if (questionNum >= 40) {
+        // Change the <h1> content to "stooooop"
+        var questionNumElement = document.getElementById('question-num');
+        questionNumElement.textContent = "GOOD JOB, YOU ARE DONE!";
+
+        return; // Exit the function, no further processing needed
+    }
     questionNum += 1;
     console.log("Question Number:", questionNum);
 

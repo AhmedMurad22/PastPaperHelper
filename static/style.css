@@ -74,6 +74,7 @@ body {
     margin: 30px;
     font-family: 'Courier New', Courier, monospace;
     color: brown;
+    display: inline-block
 }
 .text-box h1 {
     padding-left: 60px;
