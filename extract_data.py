@@ -1,6 +1,5 @@
 import requests
 import tabula
-from tabula.io import read_pdf
 from io import BytesIO
 
 
