@@ -22,4 +22,4 @@ def submit_form():
     return render_template("paper.html", qpurl=qpurl, ms_data=msdata, pd_subject=pd_subject, pd_year=pd_year, pd_code=pd_code, pd_series=pd_series, pd_variant=pd_variant, pd_coreorextended=pd_coreorextended)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port = PORT, debug=True)
+    app.run(debug=True)
